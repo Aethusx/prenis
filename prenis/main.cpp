@@ -184,8 +184,6 @@ inline void Draw(const std::vector<DrawObject>& drawObjects,
     }
 }
 
-
-
 struct randomGLfloat 
 {
     GLfloat list[4];
@@ -209,10 +207,7 @@ randomGLfloat randomGLFloat4()
 
 void display() 
 {
-    if (RGBBackground)
-        glClearColor(randomFloat(), randomFloat(), randomFloat(), 1);
-    else
-        glClearColor(0.1f, 0.25f, 0.3f, 1.0f);
+    (RGBBackground) ? glClearColor(randomFloat(), randomFloat(), randomFloat(), 1) : glClearColor(0.1f, 0.25f, 0.3f, 1.0f);
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
