@@ -580,22 +580,15 @@ private:
 };
 
 
-
 inline bool FileExists(const std::string& abs_filename)
 {
-    bool ret;
     FILE* fp = fopen(abs_filename.c_str(), "rb");
     if (fp) 
     {
-        ret = true;
         fclose(fp);
+        return true;
     }
-    else 
-    {
-        ret = false;
-    }
-
-    return ret;
+    return false;
 }
 
 inline std::string GetBaseDir(const std::string& filepath)
