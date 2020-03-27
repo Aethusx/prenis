@@ -191,7 +191,7 @@ struct randomGLfloat
     GLfloat list[4];
 };
 
-float randomFloat()
+inline float randomFloat()
 {
     return static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
 }
@@ -200,9 +200,9 @@ float randomFloat()
 randomGLfloat randomGLFloat4()
 {
     randomGLfloat arr;
-    arr.list[0] = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
-    arr.list[1] = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
-    arr.list[2] = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+    arr.list[0] = randomFloat();
+    arr.list[1] = randomFloat();
+    arr.list[2] = randomFloat();
     arr.list[3] = 1.0;
     return arr;
 }
