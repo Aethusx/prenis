@@ -19,3 +19,6 @@ stb_image
 ![Screenshot1](https://i.imgur.com/Lew0tgp.png)
 ![Screenshot2](https://i.imgur.com/jMHpvEp.png)
 ![Screenshot3](https://i.imgur.com/ooBo7zu.png)
+# Linux support
+install wine :D :P
+![Screenshot4](https://i.imgur.com/C5kXOZo.png)
