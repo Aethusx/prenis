@@ -43,7 +43,7 @@ int currentDiffuseState = 1;
 bool autoCamera = false;
 bool RGBBackground = false;
 bool RGBObject = false;
-int autoCameraStep = 0;
+unsigned long long autoCameraStep = 0;
 
 int FPS = 60;
 
