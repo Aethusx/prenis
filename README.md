@@ -23,3 +23,4 @@ stb_image
 To build, run:
 ``g++ prenis/main.cpp -lGLEW -lGL -lGLU -lglut``
 ![Screenshot4](https://i.imgur.com/C5kXOZo.png)
+![Screenshot5](https://natalia.ovh/syf/preniskrowanalinuxHOW.png)

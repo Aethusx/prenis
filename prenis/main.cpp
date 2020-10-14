@@ -988,7 +988,16 @@ int main(int argc, char** argv)
     
     float bmin[3], bmax[3];
 
-    std::string path = "obj\\default.obj";
+    const char pathSeparator =
+    #ifdef _WIN32
+        '\\';
+    #else
+        '/';
+    #endif
+
+    std::string path = "obj";
+    path += pathSeparator + std::string("default.obj");
+    
     if (argc >= 2)
         path = argv[1];
 
