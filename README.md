@@ -20,5 +20,6 @@ stb_image
 ![Screenshot2](https://i.imgur.com/jMHpvEp.png)
 ![Screenshot3](https://i.imgur.com/ooBo7zu.png)
 # Linux support
-install wine :D :P
+To build, run:
+``g++ prenis/main.cpp -lGLEW -lGL -lGLU -lglut``
 ![Screenshot4](https://i.imgur.com/C5kXOZo.png)
