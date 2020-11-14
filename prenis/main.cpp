@@ -989,7 +989,7 @@ int main(int argc, char** argv)
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH | GLUT_MULTISAMPLE);
     glutInitWindowPosition(100, 100);
     glutInitWindowSize(800, 600);
-    glutCreateWindow("prenis   [aethus 3d software]   [1.2.2]");
+    glutCreateWindow("prenis   [aethus 3d software]   [1.3]");
     glewInit();
     
     float bmin[3], bmax[3];
