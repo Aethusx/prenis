@@ -1,6 +1,6 @@
 # prenis
 
-.obj viewer based on OpenGL
+prenis is a free, fast and highly portable OpenGL Open Source obj viewer. It is available for a wide range of platforms, from large-scale servers and powerful desktop systems to handheld and embedded devices. 
 
 # How to use
 
