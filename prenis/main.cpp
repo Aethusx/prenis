@@ -1,5 +1,7 @@
 //#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup") // ukryj konsole
+#ifdef _WIN32
 #pragma comment(lib, "GL/glew32.lib")
+#endif
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <cmath>
