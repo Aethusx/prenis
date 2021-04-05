@@ -280,50 +280,28 @@ void changeLight(int light)
     {
         case 1:
             glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, pink);
-
-            glLightfv(GL_LIGHT0, GL_AMBIENT, black);
-            glLightfv(GL_LIGHT0, GL_SPECULAR, white);
-            glLightfv(GL_LIGHT0, GL_POSITION, direction);
-
-            glEnable(GL_LIGHTING);
-            glEnable(GL_LIGHT0);
-            glEnable(GL_DEPTH_TEST);
             break;
 
         case 2:
             glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, cyan);
-
-            glLightfv(GL_LIGHT0, GL_AMBIENT, black);
-            glLightfv(GL_LIGHT0, GL_SPECULAR, white);
-            glLightfv(GL_LIGHT0, GL_POSITION, direction);
-
-            glEnable(GL_LIGHTING);
-            glEnable(GL_LIGHT0);
-            glEnable(GL_DEPTH_TEST);
             break;
+
         case 3:
             glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, yellow);
-
-            glLightfv(GL_LIGHT0, GL_AMBIENT, black);
-            glLightfv(GL_LIGHT0, GL_SPECULAR, white);
-            glLightfv(GL_LIGHT0, GL_POSITION, direction);
-
-            glEnable(GL_LIGHTING);
-            glEnable(GL_LIGHT0);
-            glEnable(GL_DEPTH_TEST);
             break;
+
         case 4:
             glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, white);
-
-            glLightfv(GL_LIGHT0, GL_AMBIENT, black);
-            glLightfv(GL_LIGHT0, GL_SPECULAR, white);
-            glLightfv(GL_LIGHT0, GL_POSITION, direction);
-
-            glEnable(GL_LIGHTING);
-            glEnable(GL_LIGHT0);
-            glEnable(GL_DEPTH_TEST);
             break;
     }
+
+    glLightfv(GL_LIGHT0, GL_AMBIENT, black);
+    glLightfv(GL_LIGHT0, GL_SPECULAR, white);
+    glLightfv(GL_LIGHT0, GL_POSITION, direction);
+
+    glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHT0);
+    glEnable(GL_DEPTH_TEST);
 }
 
 void changeDiffuse(int diffuseState)
