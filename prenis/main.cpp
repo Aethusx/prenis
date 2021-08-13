@@ -58,6 +58,7 @@ int currentDiffuseState = 1;
 bool autoCamera = false;
 bool RGBBackground = false;
 bool RGBObject = false;
+bool antiAliasing = false;
 unsigned long long autoCameraStep = 0;
 
 int FPS = 60;
@@ -363,6 +364,21 @@ void mouse(int button, int state, int x, int y)
 }
 */
 
+void changeAntiAliasing()
+{
+    if (antiAliasing)
+    {
+        glEnable(GL_LINE_SMOOTH);
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    }
+    else
+    {
+        glDisable(GL_LINE_SMOOTH);
+        glDisable(GL_BLEND);
+    }
+}
+
 void init()
 {
     //glBlendFunc(GL_SRC_ALPHA_SATURATE, GL_ONE);
@@ -370,6 +386,7 @@ void init()
     //glDisable(GL_DEPTH_TEST);
     //glHint(GL_POLYGON_SMOOTH, GL_NICEST);
 
+    changeAntiAliasing();
     glEnable(GL_MULTISAMPLE);
     glEnable(GL_POLYGON_SMOOTH);
 
@@ -422,6 +439,10 @@ void special(int key, [[maybe_unused]] int x, [[maybe_unused]] int d)
             break;
         case GLUT_KEY_F6:
             setRGBObject();
+            break;
+        case GLUT_KEY_F7:
+            antiAliasing = !antiAliasing;
+            changeAntiAliasing();
             break;
     }
     glutPostRedisplay();
@@ -969,7 +990,7 @@ int main(int argc, char** argv)
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH | GLUT_MULTISAMPLE);
     glutInitWindowPosition(100, 100);
     glutInitWindowSize(800, 600);
-    glutCreateWindow("prenis   [aethus 3d software]   [1.3]");
+    glutCreateWindow("prenis   [aethus 3d software]   [1.3.1]");
     glewInit();
     
     float bmin[3], bmax[3];
