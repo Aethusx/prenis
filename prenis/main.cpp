@@ -59,7 +59,6 @@ bool autoCamera = false;
 bool RGBBackground = false;
 bool RGBObject = false;
 bool antiAliasing = false;
-unsigned long long autoCameraStep = 0;
 
 int FPS = 60;
 
@@ -98,9 +97,17 @@ public:
     {
         theta += dTheta;
     }
+    void moveRightSmall()
+    {
+        theta += (dTheta / 2);
+    }
     void moveLeft()
     {
         theta -= dTheta;
+    }
+    void moveLeftSmall()
+    {
+        theta -= (dTheta / 2);
     }
     void moveUp()
     {
@@ -397,9 +404,7 @@ void timer(int v)
 {
     if (autoCamera)
     {
-        autoCameraStep++;
-        if (autoCameraStep % 2 == 0)
-            camera.moveLeft();
+        camera.moveLeftSmall();
         glutPostRedisplay();
     }
     glutTimerFunc(1000 / FPS, timer, v);
