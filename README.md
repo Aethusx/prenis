@@ -15,7 +15,8 @@ F2 - change light\
 F3 - change diffuse\
 F4 - auto camera\
 F5 - blinking background\
-F6 - blinking object light
+F6 - blinking object light\
+F7 - toggle antialiasing
 
 # Using
 
